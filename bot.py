@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 import os
 
-TOKEN = ''  # Replace this with the regenerated token
+TOKEN = 'YOUR_BOT_TOKEN_HERE'  # Replace this with the regenerated token
 GUILD_ID = 1343989764403105892
 CHANNEL_ID = 1344652461989953639
 MESSAGE_ID = 1369418549596000366
