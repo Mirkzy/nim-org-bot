@@ -3,7 +3,13 @@ from discord.ext import commands
 import json
 import os
 
-TOKEN = 'YOUR_BOT_TOKEN_HERE'  # Replace this with the regenerated token
+# Load bot token from environment variable
+TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+
+# Make sure the token is provided
+if not TOKEN:
+    raise ValueError("DISCORD_BOT_TOKEN environment variable not set.")
+
 GUILD_ID = 1343989764403105892
 CHANNEL_ID = 1344652461989953639
 MESSAGE_ID = 1369418549596000366
