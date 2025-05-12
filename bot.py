@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import json
 import os
+from keep_alive import keep_alive 
 
 # Start the keep-alive server
 keep_alive()
@@ -116,5 +117,9 @@ async def leaderboard(ctx: discord.ApplicationContext):
     for user_id, info in sorted_players[:5]:
         leaderboard_text += f"{info['name']}: {info['kills']} kills\n"
     await ctx.send_followup(leaderboard_text)
+
+
+# Start the keep_alive function to keep the bot running
+keep_alive()
 
 bot.run(TOKEN)
