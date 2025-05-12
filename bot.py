@@ -3,6 +3,9 @@ from discord.ext import commands
 import json
 import os
 
+# Start the keep-alive server
+keep_alive()
+
 # Load bot token from environment variable
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 
